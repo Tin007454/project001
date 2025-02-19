@@ -1,0 +1,28 @@
+---
+import { Fragment } from 'astro';
+
+const MainLayout = ({ children }) => {
+  return (
+    <Fragment>
+      <header>
+        <h1>Phayao Tourism</h1>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/attractions">Attractions</a></li>
+            <li><a href="/articles">Articles</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        {children}
+      </main>
+      <footer>
+        <p>&copy; {new Date().getFullYear()} Phayao Tourism. All rights reserved.</p>
+      </footer>
+    </Fragment>
+  );
+};
+
+export default MainLayout;

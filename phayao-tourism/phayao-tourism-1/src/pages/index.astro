@@ -1,0 +1,68 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import AttractionCard from '../components/AttractionCard.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import ContactForm from '../components/ContactForm.astro';
+
+const attractions = [
+    {
+        name: 'Phayao Lake',
+        description: 'A beautiful lake surrounded by mountains, perfect for boating and relaxation.',
+        image: '/images/phayao-lake.jpg'
+    },
+    {
+        name: 'Wat Si Khom Kham',
+        description: 'An ancient temple known for its stunning architecture and serene atmosphere.',
+        image: '/images/wat-si-khom-kham.jpg'
+    }
+];
+
+const articles = [
+    {
+        title: 'Top 10 Things to Do in Phayao',
+        summary: 'Discover the best activities and attractions in Phayao province.',
+        link: '/articles/top-10-things-to-do-in-phayao'
+    },
+    {
+        title: 'A Guide to Phayao Cuisine',
+        summary: 'Explore the unique flavors and dishes of Phayao.',
+        link: '/articles/guide-to-phayao-cuisine'
+    }
+];
+
+---
+
+<MainLayout>
+    <h1>Welcome to Phayao Tourism</h1>
+    
+    <section>
+        <h2>Highlighted Attractions</h2>
+        <div class="attractions">
+            {attractions.map(attraction => (
+                <AttractionCard 
+                    name={attraction.name} 
+                    description={attraction.description} 
+                    image={attraction.image} 
+                />
+            ))}
+        </div>
+    </section>
+
+    <section>
+        <h2>Recommended Articles</h2>
+        <div class="articles">
+            {articles.map(article => (
+                <ArticleCard 
+                    title={article.title} 
+                    summary={article.summary} 
+                    link={article.link} 
+                />
+            ))}
+        </div>
+    </section>
+
+    <section>
+        <h2>Contact Us</h2>
+        <ContactForm />
+    </section>
+</MainLayout>

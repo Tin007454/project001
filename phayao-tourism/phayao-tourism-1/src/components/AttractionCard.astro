@@ -1,0 +1,36 @@
+---
+title: "AttractionCard"
+description: "A component to display information about a tourist attraction."
+---
+
+<article class="attraction-card">
+    <img src={Astro.props.image} alt={Astro.props.name} class="attraction-image" />
+    <h2 class="attraction-name">{Astro.props.name}</h2>
+    <p class="attraction-description">{Astro.props.description}</p>
+</article>
+
+<style>
+.attraction-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    text-align: center;
+}
+
+.attraction-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.attraction-name {
+    font-size: 1.5em;
+    margin: 12px 0;
+}
+
+.attraction-description {
+    font-size: 1em;
+    color: #555;
+}
+</style>

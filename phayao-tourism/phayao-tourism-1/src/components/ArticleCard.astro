@@ -1,0 +1,39 @@
+---
+title: "Article Card"
+description: "A component to display a recommended article."
+---
+
+<article class="article-card">
+    <h2 class="article-title"><slot name="title" /></h2>
+    <p class="article-summary"><slot name="summary" /></p>
+    <a class="article-link" href="<slot name='link' />">Read more</a>
+</article>
+
+<style>
+.article-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #f9f9f9;
+}
+
+.article-title {
+    font-size: 1.5em;
+    margin: 0 0 8px;
+}
+
+.article-summary {
+    font-size: 1em;
+    margin: 0 0 16px;
+}
+
+.article-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.article-link:hover {
+    text-decoration: underline;
+}
+</style>

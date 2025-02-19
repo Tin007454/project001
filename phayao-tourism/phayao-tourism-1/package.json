@@ -1,0 +1,23 @@
+{
+  "name": "phayao-tourism",
+  "version": "1.0.0",
+  "description": "A website to promote tourist attractions in Phayao province.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^2.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "phayao",
+    "tourism",
+    "attractions",
+    "website"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
